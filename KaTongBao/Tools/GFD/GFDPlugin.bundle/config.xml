@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.treefinance.gfd" version="0.1.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <!-- 不要改，会影响网页加载速度 -->
+    <preference name="BackupWebStorage" value="local" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="EnableViewportScale" value="true" />
+    <!-- 不要改，必须使用false -->
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="GapBetweenPages" value="0" />
+    <preference name="PageLength" value="0" />
+    <preference name="PaginationBreakingMode" value="page" />
+    <preference name="PaginationMode" value="unpaginated" />
+    
+    <feature name="LocalStorage">
+        <param name="ios-package" value="DSCDVLocalStorage" />
+    </feature>
+
+    <!--    1. 通讯录-->
+    <feature name="OpenAddressBook">
+        <param name="ios-package" value="DSCordovaOpenAddressBook" />
+    </feature>
+    
+    <!--    2. 通知列表-->
+    <feature name="Notification">
+        <param name="ios-package" value="DSCDVNotification" />
+    </feature>
+    
+    <!--    3. 获取位置-->
+    <feature name="Geolocation">
+        <param name="ios-package" value="DSCDVLocation" />
+    </feature>
+    <!--    4. 打开相机-->
+    <feature name="OpenCamera">
+        <param name="ios-package" value="DSCordovaOpenCamera" />
+    </feature>
+
+    <!--    6. 获取配置-->
+    <feature name="AppConfig">
+        <param name="ios-package" value="DSCordovaAppConfigPlugin" />
+    </feature>
+    
+    <!--    7. 埋点-->
+    <feature name="BusinessLog">
+        <param name="ios-package" value="DSCordovaBusinessLogPlugin" />
+    </feature>
+   <!--    8. 跳转-->
+    <feature name="Controller">
+        <param name="ios-package" value="DSCordovaPageControllerPlugin" />
+    </feature>
+    
+   <!--    9. naviBar-->
+    <feature name="NavBar">
+        <param name="ios-package" value="DSNavBarPlugin" />
+    </feature>
+    
+    <!--   10. 打开网页，如邮箱-->
+    <feature name="OpenWebView">
+        <param name="ios-package" value="DSCordovaOpenWebView" />
+    </feature>
+    
+   <!--   11.  进度-->
+    <feature name="Progress">
+        <param name="ios-package" value="DSCordovaProgressPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    
+  <!--    12. tabbar-->
+    <feature name="TabBar">
+        <param name="ios-package" value="DSTabbarPlugin" />
+    </feature>
+  <!--    13. 网页-->
+    <feature name="WebView">
+        <param name="ios-package" value="DSWebViewPlugin" />
+    </feature>
+<!--    14.参数加密-->
+   <feature name = "Encrypt">
+    <param name = "ios-package" value = "DSCordovaEncrypt" />
+    </feature>
+
+    
+    
+    
+    <name>功夫贷</name>
+    <description>
+        功夫贷，一会儿“功夫”钱就到了
+    </description>
+    <author email="dashuadmin@treefinance.com.cn" href="http://www.treefinance.com.cn">
+        杭州大树网络技术公司
+    </author>
+    <content src="home.html" />
+    
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="itms:*" />
+    <allow-intent href="gfdbridge:*" />
+    <allow-intent href="itms-apps:*" />
+</widget>

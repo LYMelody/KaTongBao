@@ -1,0 +1,6 @@
+framework module GFDPlugin {
+  umbrella header "GFDPlugin.h"
+
+  export *
+  module * { export * }
+}

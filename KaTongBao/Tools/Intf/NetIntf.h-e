@@ -1,0 +1,46 @@
+//
+//  NetIntf.h
+//  Kuaifu
+//
+//  Created by ND on 12-12-27.
+//  Copyright (c) 2012年 ND. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#define try_net
+
+@interface NetIntf : NSObject
+
+
++ (NSInteger) readPostData: (NSString*) urlstr: (NSString*)sid: (NSString*) jsonRequest: (NSString**)result;
+
++ (NSInteger) login:(NSString*)username pwd:(NSString*)pwd shopid:(NSString**)shopid mobile:(NSString**)mobile state:(NSString**)state shopcode:(NSString**)shopcode shopname:(NSString**)shopname errmsg:(NSString**)errmsg;
++ (NSInteger) systeminfo:(NSString*)shopid msgContent:(NSString**)msgContent errmsg:(NSString**)errmsg;
++ (NSInteger) feedback:(NSString*)shopid feedbackinfo:(NSString*)feedbackinfo errmsg:(NSString**)errmsg;
++ (NSInteger) changepwd:(NSString*)shopid oldpwd:(NSString*)oldpwd userpwd:(NSString*)userpwd errmsg:(NSString**)errmsg;
++ (NSInteger) regfirst: (NSString*)regphone username:(NSString*)username userpwd:(NSString*)userpwd shopnbr:(NSString*)shopnbr shopid:(NSString**)shopid errmsg:(NSString**)errmsg;
++ (NSInteger) regphoto: (NSString*)shopid photo1:(NSString*)photo1 photo2:(NSString*)photo2 photo3:(NSString*)photo3 photo4:(NSString*)photo4 errmsg:(NSString**)errmsg;
++ (NSInteger) regshop: (NSString*)shopid shopname:(NSString*)shopname shopbank:(NSString*)shopbank accountnbr:(NSString*)accountnbr accountname:(NSString*)accountname shopkey:(NSString*)shopkey errmsg:(NSString**)errmsg;
++ (NSInteger) regcheck: (NSString*)mobile checkcode:(NSString**)checkcode errmsg:(NSString**)errmsg;
++ (NSInteger) regist: (NSString*)shopid errmsg:(NSString**)errmsg;
++ (NSInteger) logout: (NSString*)shopid errmsg:(NSString**)errmsg;
++ (NSInteger) shopinput: (NSString*)mobile username:(NSString*)username pwd:(NSString*)pwd errmsg:(NSString**)errmsg;
++ (NSInteger) shopcheck: (NSString*)phone photo1:(NSString*)photo1 photo2:(NSString*)photo2 photo3:(NSString*)photo3
+   shopname:(NSString*)shopname shopbank:(NSString*)shopbank accountnbr:(NSString*)accountnbr errmsg:(NSString**)errmsg;
++ (NSInteger) usercheck: (NSString*)charnbr errmsg:(NSString**)errmsg;
++ (NSInteger) userreg: (NSString*)cardnbr cardtype:(NSString*)cardtype cardbank:(NSString*)cardbank
+             username:(NSString*)username usernbr:(NSString*)usernbr userphone:(NSString*)userphone errmsg:(NSString**)errmsg;
+
++ (NSInteger) ordersearch: (NSString*)shopid state:(NSString*)state dataArray:(NSMutableArray*)dataArray errmsg:(NSString**)errmsg;
++ (NSInteger) ydddzf: (NSString*)username begindt:(NSString*)begindt enddt:(NSString*)enddt errmsg:(NSString**)errmsg;
++ (NSInteger) ydddzfjlcx: (NSString*)username begindt:(NSString*)begindt enddt:(NSString*)enddt dataArray:(NSMutableArray*)dataArray errmsg:(NSString**)errmsg;
++ (NSInteger) getordercode: (NSString*)shopid userordercode:(NSString*)userordercode goodsid:(NSString*)goodsid amount:(NSString*)amount orderdesc:(NSString*)orderdesc ordercode:(NSString**)ordercode orderid:(NSString**)orderid errmsg:(NSString**)errmsg;
++ (NSInteger) checkcardinfo: (NSString*)cardnbr userid:(NSString**)userid isreg:(BOOL*)isreg errmsg:(NSString**)errmsg;
++ (NSInteger) checkuserinfo: (NSString**)userid username:(NSString*)username usernbr:(NSString*)usernbr userphone:(NSString*)userphone bankcardno:(NSString*)bankcardno bankcardtype:(NSString*)bankcardtype bankname:(NSString*)bankname bankverify:(NSString*)bankverify bankcvv:(NSString*)bankcvv bankpwd:(NSString*)bankpwd orderid:(NSString*)orderid errmsg:(NSString**)errmsg;
++ (NSInteger) orderpaycheck: (NSString*)shopid ordercode:(NSString*)ordercode userid:(NSString*)userid goodsid:(NSString*)goodsid amount:(NSString*)amount otheramount:(NSString*)otheramount orderdesc:(NSString*)orderdesc orderid:(NSString**)orderid errmsg:(NSString**)errmsg;
++ (NSInteger) payorder: (NSString*)orderid sms:(NSString*)sms errmsg:(NSString**)errmsg;
++ (NSInteger) payordersecond: (NSString*)orderid sms:(NSString*)sms errmsg:(NSString**)errmsg;
++ (NSInteger) querypay: (NSString*)shopid goodsid:(NSString*)goodsid begindt:(NSString*)begindt enddt:(NSString*)enddt orderdesc:(NSString*)orderdesc dataArray:(NSMutableArray*)dataArray errmsg:(NSString**)errmsg;
++ (NSInteger) querypaybyid: (NSString*)ordercode dataArray:(NSMutableArray*)dataArray errmsg:(NSString**)errmsg;
+
+@end

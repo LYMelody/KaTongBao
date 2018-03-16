@@ -1,0 +1,118 @@
+//
+//  UIPayCheck.m
+//  wujie
+//
+//  Created by rongfeng on 15/12/3.
+//  Copyright © 2015年 ND. All rights reserved.
+//
+
+#import "UIPayCheck.h"
+#import "Common.h"
+#import "UIView+SDAutoLayout.h"
+//#import "UIManager.h"
+#import "TDMyMainViewController.h"
+@interface UIPayCheck ()
+
+@end
+
+@implementation UIPayCheck
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    //self.navigationController.navigationBar.backItem.hidesBackButton = YES;
+    self.navigationItem.hidesBackButton = YES;
+    
+    
+    //[self addBackBtn];
+    self.title = @"支付结果";
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIButton *button = [[UIButton alloc] init];
+    [button setTitle:@"完成" forState:UIControlStateNormal];
+    button.backgroundColor = Green58;
+    [button addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+    button.titleLabel.font = [UIFont systemFontOfSize:15];
+    button.tag = 1009;
+    button.layer.cornerRadius = 4;
+    [self.view addSubview:button];
+    
+    UIButton *btn = [[UIButton alloc] init];
+    [btn setTitle:@"订单列表" forState:UIControlStateNormal];
+    btn.backgroundColor = Green58;
+    [btn addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+    btn.titleLabel.font = [UIFont systemFontOfSize:15];
+    btn.tag = 1010;
+    btn.layer.cornerRadius = 4;
+    btn.backgroundColor = BlueColor;
+   // [self.view addSubview:btn];
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"正在审核";
+    label.font = [UIFont systemFontOfSize:20];
+    label.textColor = [UIColor blackColor];
+    [self.view addSubview:label];
+    
+    UILabel *displayLabel = [[UILabel alloc] init];
+    displayLabel.text = @"您的订单正在审核";
+    displayLabel.font = [UIFont systemFontOfSize:15];
+    displayLabel.textColor = [UIColor blackColor];
+    [self.view addSubview:displayLabel];
+    
+    UILabel *displayLabel2 = [[UILabel alloc] init];
+    displayLabel2.text = @"请稍后前往订单列表查询订单";
+    displayLabel2.font = [UIFont systemFontOfSize:15];
+    displayLabel2.textColor = [UIColor blackColor];
+    displayLabel2.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:displayLabel2];
+    
+    UIImageView *imgView = [[UIImageView alloc] init];
+    imgView.backgroundColor = Green58;
+    //imgView.frame = CGRectMake(115, 93, 90, 90);
+    imgView.layer.cornerRadius = 45;
+    imgView.image = [UIImage imageNamed:@"正在审核@2x.png"];
+    
+    [self.view addSubview:imgView];
+    
+    label.sd_layout.leftSpaceToView(self.view,120).topSpaceToView(self.view,203).widthIs(80).heightIs(30);
+    displayLabel.sd_layout.leftSpaceToView(self.view,92.5).topSpaceToView(self.view,241.5).widthIs(135).heightIs(21);
+    displayLabel2.sd_layout.centerXEqualToView(self.view).topSpaceToView(self.view,263.5).widthIs(220).heightIs(21);
+    button.sd_layout.leftSpaceToView(self.view,20).topSpaceToView(self.view,312.5).rightSpaceToView(self.view,20).heightIs(40);
+   // btn.sd_layout.rightSpaceToView(self.view,20).topSpaceToView(self.view,312.5).widthIs(90).heightIs(40);
+    imgView.sd_layout.leftSpaceToView(self.view,115).topSpaceToView(self.view,93).widthIs(90).heightIs(90);
+    
+    
+}
+
+- (void)back:(UIButton *)btn {
+//    if (btn.tag == 1009) {
+//        [UIManager doNavWnd:WndPayMain];
+//        
+//    }else if (btn.tag == 1010){
+//        
+//        [UIManager doNavWnd:WndQueryPay];
+//    }
+    
+    if (btn.tag == 1009) {
+        TDMyMainViewController *Main = [[TDMyMainViewController alloc] init];
+        [self.navigationController pushViewController:Main animated:YES];
+    }
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end
