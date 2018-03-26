@@ -26,6 +26,8 @@
 
 #define ShareAppKey @"1bb7a83cc8740"
 #define ShareAPPSecrect @"97accdadb09d999d3c68e940aa760501"
+//蒲公英key
+#define PGY_APP_KEY @"3aa33285582d35a0fe624b162741c0f1"
 
 #define PPDSDK_sKeyAPPID @"bc76e4ee44fb4a07b7943e70111069de"
 #define PPDSDK_PubKey @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCZeZxVixhB7a6v4QIVKYuLU+kuQNcrmqp1G1s7MV5mMIIYxCsqx3gR5T4yHHh3N82tszy2Ri37dIZhxpIqGjrnZy3c2lXMyHTuOAthdwwkzW5XZSKHJ7GVPQN8rryspEFjw52okuuaqOYudOvvAZYD3QmT7NdXYojCipOihkTxpQIDAQAB"
@@ -81,7 +83,7 @@
     [self.window makeKeyAndVisible];
     
     
-    BOOL IsAPPStore = YES;
+  //  BOOL IsAPPStore = YES;
     
     //检测更新
 //    if (IsAPPStore) {
@@ -89,6 +91,14 @@
 //    }else {
 //        [self RequestForVersionUpdate];
 //    }
+    
+    //蒲公英
+    
+    [[PgyManager sharedPgyManager] startManagerWithAppId:PGY_APP_KEY];
+    [[PgyManager sharedPgyManager] setEnableFeedback:NO];
+    [[PgyUpdateManager sharedPgyManager] startManagerWithAppId:PGY_APP_KEY];
+    [[PgyUpdateManager sharedPgyManager] checkUpdate];
+    
     
     //设置启动动画
     UIImage *splashImg;
