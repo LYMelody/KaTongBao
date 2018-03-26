@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58A2ABC92069346A00187A1F /* PgySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A2ABC72069346A00187A1F /* PgySDK.framework */; };
+		58A2ABCA2069346A00187A1F /* PgyUpdate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A2ABC82069346A00187A1F /* PgyUpdate.framework */; };
+		58A2ABCC2069349C00187A1F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A2ABCB2069349C00187A1F /* OpenGLES.framework */; };
+		58A2ABCE206934A800187A1F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A2ABCD206934A800187A1F /* CoreMotion.framework */; };
+		58A2ABD0206934BF00187A1F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A2ABCF206934BF00187A1F /* AudioToolbox.framework */; };
+		58A2ABD2206934C900187A1F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A2ABD1206934C900187A1F /* AVFoundation.framework */; };
 		CC051B3E1D1D1D3100CD398F /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CC051B2C1D1D1D3100CD398F /* SDImageCache.m */; };
 		CC051B3F1D1D1D3100CD398F /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = CC051B2E1D1D1D3100CD398F /* SDWebImageCompat.m */; };
 		CC051B401D1D1D3100CD398F /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CC051B301D1D1D3100CD398F /* SDWebImageDecoder.m */; };
@@ -555,6 +561,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58A2ABC72069346A00187A1F /* PgySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PgySDK.framework; sourceTree = "<group>"; };
+		58A2ABC82069346A00187A1F /* PgyUpdate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PgyUpdate.framework; sourceTree = "<group>"; };
+		58A2ABCB2069349C00187A1F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		58A2ABCD206934A800187A1F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		58A2ABCF206934BF00187A1F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		58A2ABD1206934C900187A1F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CC051B2B1D1D1D3100CD398F /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
 		CC051B2C1D1D1D3100CD398F /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
 		CC051B2D1D1D1D3100CD398F /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
@@ -1420,12 +1432,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2959531D1D0D470072F91A /* SystemConfiguration.framework in Frameworks */,
+				58A2ABD2206934C900187A1F /* AVFoundation.framework in Frameworks */,
+				58A2ABD0206934BF00187A1F /* AudioToolbox.framework in Frameworks */,
+				58A2ABCE206934A800187A1F /* CoreMotion.framework in Frameworks */,
+				58A2ABCC2069349C00187A1F /* OpenGLES.framework in Frameworks */,
+				CC2959571D1D0D5E0072F91A /* CoreTelephony.framework in Frameworks */,
 				CC200D601D10E9DB00CB6ED3 /* libsqlite3.tbd in Frameworks */,
 				CCA5D9601E66C24D00DD9666 /* ImageIO.framework in Frameworks */,
 				CCA5D95E1E66C24400DD9666 /* JavaScriptCore.framework in Frameworks */,
 				CC200D5E1D10E9D100CB6ED3 /* libstdc++.tbd in Frameworks */,
 				CC200D5C1D10E9C500CB6ED3 /* libz.tbd in Frameworks */,
 				CCA5D95C1E66C22100DD9666 /* libicucore.tbd in Frameworks */,
+				58A2ABCA2069346A00187A1F /* PgyUpdate.framework in Frameworks */,
 				CCDDF5D91DC72DAF0045354C /* libiconv.tbd in Frameworks */,
 				CC2959601D1D0D8D0072F91A /* AddressBook.framework in Frameworks */,
 				CC2959611D1D0D8D0072F91A /* AddressBookUI.framework in Frameworks */,
@@ -1441,10 +1460,8 @@
 				CCA5D9551E66C1F800DD9666 /* libWeChatSDK.a in Frameworks */,
 				CCA5D94D1E66C1F800DD9666 /* QQConnector.framework in Frameworks */,
 				CCA5D9581E66C1F800DD9666 /* MOBFoundation.framework in Frameworks */,
-				CC2959571D1D0D5E0072F91A /* CoreTelephony.framework in Frameworks */,
 				CC2959551D1D0D530072F91A /* MobileCoreServices.framework in Frameworks */,
 				CCA5D9491E66C1F800DD9666 /* ShareSDKUI.framework in Frameworks */,
-				CC2959531D1D0D470072F91A /* SystemConfiguration.framework in Frameworks */,
 				CC2959511D1D0D2F0072F91A /* libresolv.9.tbd in Frameworks */,
 				CC200D621D10E9E700CB6ED3 /* libsqlite3.0.tbd in Frameworks */,
 				CCA5D9501E66C1F800DD9666 /* WechatConnector.framework in Frameworks */,
@@ -1457,6 +1474,7 @@
 				CC200D561D10E9AB00CB6ED3 /* CoreLocation.framework in Frameworks */,
 				CCA5D9531E66C1F800DD9666 /* libWeiboSDK.a in Frameworks */,
 				CC200D541D10E9A400CB6ED3 /* CoreGraphics.framework in Frameworks */,
+				58A2ABC92069346A00187A1F /* PgySDK.framework in Frameworks */,
 				CC200D521D10E99A00CB6ED3 /* Security.framework in Frameworks */,
 				CC200D501D10E99000CB6ED3 /* UIKit.framework in Frameworks */,
 				CC73123F1F78AA2B00F21521 /* GFDPlugin.framework in Frameworks */,
@@ -2687,6 +2705,8 @@
 		CC6EC7F21D66B43A0097E63F /* FrameWorks */ = {
 			isa = PBXGroup;
 			children = (
+				58A2ABC72069346A00187A1F /* PgySDK.framework */,
+				58A2ABC82069346A00187A1F /* PgyUpdate.framework */,
 				CC579C791DCC257700D1A25E /* GFDPlugin.framework */,
 				CC29595E1D1D0D8D0072F91A /* AddressBook.framework */,
 				CC29595F1D1D0D8D0072F91A /* AddressBookUI.framework */,
@@ -3060,6 +3080,10 @@
 		CCDDF5D71DC72DAF0045354C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58A2ABD1206934C900187A1F /* AVFoundation.framework */,
+				58A2ABCF206934BF00187A1F /* AudioToolbox.framework */,
+				58A2ABCD206934A800187A1F /* CoreMotion.framework */,
+				58A2ABCB2069349C00187A1F /* OpenGLES.framework */,
 				CCA5D95F1E66C24D00DD9666 /* ImageIO.framework */,
 				CCA5D95D1E66C24400DD9666 /* JavaScriptCore.framework */,
 				CCA5D95B1E66C22100DD9666 /* libicucore.tbd */,
@@ -3144,7 +3168,7 @@
 				TargetAttributes = {
 					CC200D181D10E59B00CB6ED3 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = ZP26G972X9;
+						DevelopmentTeam = X8CH365KCN;
 					};
 					CC200D311D10E59B00CB6ED3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -3837,7 +3861,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZP26G972X9;
+				DEVELOPMENT_TEAM = X8CH365KCN;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3871,7 +3895,7 @@
 					"-l",
 					"\"C++\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jieniu.kjt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.payment.ktb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -3884,7 +3908,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZP26G972X9;
+				DEVELOPMENT_TEAM = X8CH365KCN;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3918,7 +3942,7 @@
 					"-l",
 					"\"C++\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jieniu.kjt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.payment.ktb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";

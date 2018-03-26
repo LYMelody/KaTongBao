@@ -8,14 +8,14 @@
 
 #import "AppDelegate.h"
 #import "JXLoginViewController.h"
-//#import <GFDPlugin/GFDPlugin.h>
 #define APPID  @"8266152b039dd499a70faac5899e2584"
 #import "LoginViewController.h"
 #import "SBJSON.h"
 #import "IBHttpTool.h"
 #import "Common.h"
 #import "GuidViewController.h"
-//#import "PPDLoanSdk.h"   //注销拍拍贷
+#import <PgySDK/PgyManager.h>
+#import <PgyUpdate/PgyUpdateManager.h>
 
 #import <ShareSDKUI/ShareSDKUI.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
@@ -80,27 +80,15 @@
     
     [self.window makeKeyAndVisible];
     
-
-    
-    
-    
-//    [[GFDPlugin sharedInstance] setAppID:@"katongbao"];
-//    [[GFDPlugin sharedInstance] setAppKey:@"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCYA1gYvLkQTZfsEAoWRFCbF6uOIHwjEjX82MJ JTp2FUJq0DfJ4pmyAY7PvZ0iI/KzSzzfW07dFL9kjYJwX9rn1sMEa3POxtznJcmJI1qoW8PPeUyY2BWgHhTgFwBl+leSc+4MWua7ljNjr6Mndot8EWEqdrN0L2zQvTzMa3IfQQIDAQAB"];
-    
-    //功夫贷
-   // [[GFDPlugin sharedInstance] setupAPPID:@"katongbao" appKey:@"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCYA1gYv/LkQTZfsEAoWRFCbF6uOIHwjEjX82MJJTp2FUJq0DfJ4pmyAY7PvZ0iI/KzSzzfW07dFL9kjYJwX9rn1sMEa3POxtznJcmJI1qoW8PPeUyY2BWgHhTgFwBl+leSc+4MWua7ljNjr6Mndot8EWEqdrN0L2zQvTzMa3IfQQIDAQAB"];
-    
-    //小贷
-    //[LoansSDK loadPPDLoanSDKInit:PPDSDK_sKeyAPPID publicKey:PPDSDK_PubKey privateKey:PPDSDK_PriKey];
     
     BOOL IsAPPStore = YES;
     
     //检测更新
-    if (IsAPPStore) {
-        [self CheckAPPStoreUpDate];
-    }else {
-        [self RequestForVersionUpdate];
-    }
+//    if (IsAPPStore) {
+//        [self CheckAPPStoreUpDate];
+//    }else {
+//        [self RequestForVersionUpdate];
+//    }
     
     //设置启动动画
     UIImage *splashImg;
